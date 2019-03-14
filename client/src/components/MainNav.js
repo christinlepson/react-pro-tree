@@ -4,7 +4,7 @@ import {Navbar, Nav, Button, Container} from 'react-bootstrap';
 import logo from '../images/logo.png';
 
 const MainNav = () => (
-    <div className="mainnav-wrapper pt-lg-2">
+    <div className="mainnav-wrapper pt-2">
         <Navbar bg="light" expand="lg">
         <Container>
             <Navbar.Brand href="#home">
