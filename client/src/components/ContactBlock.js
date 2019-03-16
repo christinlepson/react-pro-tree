@@ -10,7 +10,7 @@ const ContactBlock = () => (
                     <h2>Contact Us for a Free Estimate</h2>
                     <p>
                     All evaluations and treatments are performed by our trained professionals.
-                    Fill out our contact for or <a href="tel:1-555-555-5555" className="font-weight-bold">call us today at 410-465-TREE (8733) for a free estimate.</a>
+                    Fill out our contact form, or <a href="tel:1-555-555-5555" className="font-weight-bold">call us today at 410-465-TREE (8733) for a free estimate.</a>
                     </p>
                 </Col>
                 <Col lg='7'>
