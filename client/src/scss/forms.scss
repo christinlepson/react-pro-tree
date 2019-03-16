@@ -1,0 +1,28 @@
+.contact-form {
+    max-width: 940px;
+}
+
+.form-control {
+    padding: 1.3rem 1rem;
+    margin-bottom: 30px;
+    border-radius: 0;
+    border: 1px solid $light;
+}
+
+textarea.form-control {
+    padding: 1rem;
+}
+
+input::placeholder {
+    color: $text-muted;
+}
+
+select.form-control {
+    color: $text-muted;
+}
+
+.contact-select-wrapper {
+    margin-bottom: 30px;
+    border: 1px solid $light;
+    background: $light;
+}

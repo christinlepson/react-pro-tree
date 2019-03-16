@@ -13,7 +13,6 @@ const MainJumbotron = () => (
             <p className="d-none d-md-block">
             No job is too small for Pro Tree, and our inspections are always free. We have over 50 years of combined tree experience.
             </p>
-            <p>
             <Row>
                 <Col md className="d-lg-none">
                     <Button size="lg" className="mt-xs-2 mt-lg-5" variant="primary">
@@ -25,7 +24,6 @@ const MainJumbotron = () => (
                     <Button size="lg" variant="secondary">Get A Free Estimate</Button>
                 </Col>
             </Row>
-            </p>
         </Container>
     </Jumbotron>
 );
