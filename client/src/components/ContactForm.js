@@ -187,13 +187,13 @@ class ContactForm extends Component {
                         <Recaptcha
                             className="recaptcha"
                             onloadCallback={this.onCaptchaLoad}
-                            sitekey="6LevApgUAAAAAATBj9mGdx4SWTPXzNZGbrE854eT"
+                            sitekey="6LcjA5gUAAAAAGzBCKW2c00987hYZuS1ibuOJOIB"
                             render="explicit"
                             verifyCallback={this.onCaptchaVerify}
                         />
                     </Col>
-                    <Col className="d-flex">
-                        <Button variant="light" type="submit" size="lg" className="mx-auto mr-md-0 ml-md-auto">
+                    <Col>
+                        <Button variant="light" type="submit" size="lg" className="float-right">
                         Submit
                         </Button>
                     </Col>

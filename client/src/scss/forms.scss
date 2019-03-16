@@ -23,7 +23,17 @@ select.form-control {
 }
 
 .contact-select-wrapper {
+    padding: 2px;
     margin-bottom: 30px;
-    border: 1px solid $light;
-    background: $light;
+    border: 1px solid $white;
+    background: $white;
+}
+
+#g-recaptcha {
+    @include media-breakpoint-up(xs) {
+        margin-bottom: 30px;
+    }
+    @include media-breakpoint-up(md) {
+        margin-bottom: 0;
+    }
 }
