@@ -1,11 +1,22 @@
 import React from 'react';
 import ContactForm from './ContactForm';
-import { Container } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
 
 const ContactBlock = () => (
-    <div className="contactblock-wrapper bg-light py-5">
-        <Container className="mx-auto">
-            <ContactForm/>
+    <div className="contactblock-wrapper py-5">
+        <Container>
+            <Row>
+                <Col lg className="text-light d-flex justify-content-center flex-column">
+                    <h2>Contact Us for a Free Estimate</h2>
+                    <p>
+                    All evaluations and treatments are performed by our trained professionals.
+                    Fill out our contact for or <a href="tel:1-555-555-5555" className="font-weight-bold">call us today at 410-465-TREE (8733) for a free estimate.</a>
+                    </p>
+                </Col>
+                <Col lg='7'>
+                    <ContactForm/>
+                </Col>
+            </Row>
         </Container>
     </div>
 );

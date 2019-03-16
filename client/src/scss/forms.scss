@@ -28,14 +28,6 @@ select.form-control {
     border: none;
 }
 
-.contact-select-wrapper {
-    padding: 2px;
-    height: 43.59px;
-    margin-bottom: 30px;
-    border: 1px solid $secondary;
-    background: $white;
-}
-
 #g-recaptcha {
     @include media-breakpoint-up(xs) {
         margin-bottom: 30px;
@@ -67,4 +59,12 @@ select.form-control {
 
 input.is-invalid + i.form-icon {
     display: none;
+}
+
+.contact-select-wrapper {
+    padding: 2px;
+    height: 43.59px;
+    margin-bottom: 30px;
+    border: 1px solid $secondary;
+    background: $white
 }
