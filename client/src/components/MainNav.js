@@ -24,7 +24,7 @@ const MainNav = () => (
                     <Nav.Link className="ml-lg-3" href="#rewards">Referral Rewards</Nav.Link>
                 </Nav>
                 <Button
-                    href="tel:1-555-555-5555"
+                    href="tel:1-410-465-8733"
                     className="my-2 my-lg-0 ml-lg-auto"
                     variant="outline-primary"
                 >

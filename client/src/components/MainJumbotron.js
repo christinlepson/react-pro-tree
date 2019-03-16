@@ -15,7 +15,7 @@ const MainJumbotron = () => (
             </p>
             <Row>
                 <Col md className="d-lg-none">
-                    <Button size="lg" className="mt-xs-2 mt-lg-5" variant="primary">
+                    <Button href="tel:1-410-465-8733" size="lg" className="mt-xs-2 mt-lg-5" variant="primary">
                         <i className="fas fa-phone fa-flip-horizontal mr-2"></i>
                         Call Toll Free
                     </Button>
