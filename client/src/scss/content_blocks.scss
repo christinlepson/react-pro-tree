@@ -8,4 +8,7 @@
 
 .contactblock-wrapper {
     background: $secondary url('./images/contactblock-bg.jpg') no-repeat fixed center/cover;
+    a:hover {
+        color: $link-lighten;
+    }
 }

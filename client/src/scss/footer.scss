@@ -1,3 +1,63 @@
 footer {
-    background: $dark-accent;
+
+    a:hover {
+        color: $link-lighten;
+    }
+
+    font-size: .85rem;
+
+    .footer-nav {
+        text-align: left;
+    }
+
+    .nav-link {
+        border-bottom: 1px solid $light;
+        padding-left: 0;
+        color: $gray-400;
+        text-transform: uppercase;
+        font-size: .85rem;
+
+        &:hover {
+            color: $light;
+        }
+
+    }
+
+    .footer-header {
+
+        color: $light;
+        text-align: left;
+        font-weight: 300;
+        padding-bottom: .8rem;
+        font-size: 1.5rem;
+
+        &::before {
+            content: '';
+            width: 30px;
+            height: 2px;
+            background: $primary;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+
+        &::after {
+            content: '';
+            width: calc(100% - 40px);
+            height: 2px;
+            background: $light;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+
+    }
+
+    .copyright-info {
+        background: $dark-accent;
+        color: $light;
+        font-size: .75rem;
+    }
+
+
 }
