@@ -37,11 +37,13 @@ const Footer = () => (
                 </Col>
             </Row>
         </Container>
-        <Row className="copyright-info py-2">
-                <Col className="font-weight-bold">
-                &copy; {currentYear} <span className="font-italic">Pro Tree Inc. All Rights Reserved</span>
-                </Col>
-        </Row>
+        <Container fluid>
+            <Row className="copyright-info py-2">
+                    <Col className="font-weight-bold">
+                    &copy; {currentYear} <span className="font-italic">Pro Tree Inc. All Rights Reserved</span>
+                    </Col>
+            </Row>
+        </Container>
     </footer>
 );
 
