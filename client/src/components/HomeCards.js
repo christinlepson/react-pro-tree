@@ -40,7 +40,7 @@ const HomeCards = () => (
                 </Zoom>
                 </Col>
 
-                <Col sm="10" lg="4" className="mb-5 mb-lg-0 mx-auto">
+                <Col sm="10" lg="4" className="mx-auto">
                 <Zoom bottom delay={200}>
                     <Card>
                         <Card.Img variant="top" src={rewardsImg} />

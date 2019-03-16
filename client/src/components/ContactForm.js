@@ -216,7 +216,7 @@ class ContactForm extends Component {
                         />
                     </Col>
                     <Col>
-                        <Button variant="secondary" type="submit" size="lg" className="float-right">
+                        <Button variant="secondary" type="submit" className="float-right">
                         Submit
                         </Button>
                     </Col>
