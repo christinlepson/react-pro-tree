@@ -27,17 +27,21 @@ class ContactForm extends Component {
             .matches(/^[0-9]{5}(?:-[0-9]{4})?$/, 'Please Enter a Valid Zipcode')
       });
 
+    onCaptchaLoad = () => {}
+
+    onCaptchaVerify = () => {}
+
     formatPhoneNumber = phoneNumber => {
         const phoneRegex = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
         return phoneNumber.replace(phoneRegex, "$1-$2-$3");
-    };
+    }
 
     submitHandler = values => {
         values.phone = this.formatPhoneNumber(values.phone);
         setTimeout(() => {
           alert(JSON.stringify(values, null, 2));
         }, 500);
-    };
+    }
 
     render () {
         return(
@@ -183,7 +187,7 @@ class ContactForm extends Component {
                         <Recaptcha
                             className="recaptcha"
                             onloadCallback={this.onCaptchaLoad}
-                            sitekey="6Lft-pcUAAAAAEtT5-fUNkd6KxPHmJa1rJpVpbyx"
+                            sitekey="6LevApgUAAAAAATBj9mGdx4SWTPXzNZGbrE854eT"
                             render="explicit"
                             verifyCallback={this.onCaptchaVerify}
                         />
