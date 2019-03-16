@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import Recaptcha from 'react-recaptcha'
 import { Form, Row, Col, Button } from 'react-bootstrap';
 import * as Yup from 'yup';
 import {Formik} from 'formik';
@@ -178,6 +179,15 @@ class ContactForm extends Component {
                     </Col>
                 </Row>
                 <Row>
+                    <Col>
+                        <Recaptcha
+                            className="recaptcha"
+                            onloadCallback={this.onCaptchaLoad}
+                            sitekey="6Lft-pcUAAAAAEtT5-fUNkd6KxPHmJa1rJpVpbyx"
+                            render="explicit"
+                            verifyCallback={this.onCaptchaVerify}
+                        />
+                    </Col>
                     <Col className="d-flex">
                         <Button variant="light" type="submit" size="lg" className="mx-auto mr-md-0 ml-md-auto">
                         Submit
