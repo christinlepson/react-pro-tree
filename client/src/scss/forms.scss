@@ -2,11 +2,16 @@
     max-width: 940px;
 }
 
+.form-group {
+    position: relative;
+}
+
 .form-control {
     padding: 1.3rem 1rem;
     margin-bottom: 30px;
     border-radius: 0;
-    border: 1px solid $light;
+    border: 1px solid $secondary;
+    position: relative;
 }
 
 textarea.form-control {
@@ -20,12 +25,14 @@ input::placeholder {
 select.form-control {
     color: $text-muted;
     padding: 0;
+    border: none;
 }
 
 .contact-select-wrapper {
     padding: 2px;
+    height: 43.59px;
     margin-bottom: 30px;
-    border: 1px solid $white;
+    border: 1px solid $secondary;
     background: $white;
 }
 
@@ -36,4 +43,28 @@ select.form-control {
     @include media-breakpoint-up(md) {
         margin-bottom: 0;
     }
+}
+
+.form-error {
+    position: absolute;
+    bottom: 5px;
+    left: 18px;
+    color: $danger;
+}
+
+.was-validated .form-control:invalid, .form-control.is-invalid {
+    border: 1px solid $danger !important;
+}
+
+/* Icons */
+
+.form-icon {
+    position: absolute;
+    right: 10px;
+    top: 13.79px;
+    color: $primary;
+}
+
+input.is-invalid + i.form-icon {
+    display: none;
 }

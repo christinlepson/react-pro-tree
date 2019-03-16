@@ -3,7 +3,7 @@ import ContactForm from './ContactForm';
 import { Container } from 'react-bootstrap';
 
 const ContactBlock = () => (
-    <div className="contactblock-wrapper bg-secondary py-5">
+    <div className="contactblock-wrapper bg-light py-5">
         <Container className="mx-auto">
             <ContactForm/>
         </Container>

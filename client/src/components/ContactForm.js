@@ -10,21 +10,22 @@ class ContactForm extends Component {
     schema = Yup.object().shape({
         email: Yup.string()
           .email('Invalid email address')
-          .required('E-mail Address is Required'),
+          .required('E-mail address is required'),
         firstName: Yup.string()
-          .min(2, 'Must be longer than 2 characters')
-          .required('First Nameequired'),
+          .min(2, 'Must be at least 2 characters')
+          .required('First name is required'),
         lastName: Yup.string()
-          .min(2, 'Must be longer than 2 characters')
-          .required('Last Name is Required'),
+          .min(2, 'Must be at least 2 characters')
+          .required('Last name is required'),
         serviceType: Yup.string()
-            .required('Please Select a Service Type'),
+            .required('Please select a Service Type'),
         phone: Yup.string()
-            .required('Phone Number is Required')
-            .matches(/^\(?([0-9]{3})\)?[-.●]?([0-9]{3})[-.●]?([0-9]{4})$/, 'Please Enter a Valid Phone Number'),
+            .required('Phone number is required')
+            .matches(/^\(?([0-9]{3})\)?[-.●]?([0-9]{3})[-.●]?([0-9]{4})$/, 'Please enter a valid phone number'),
         zipcode: Yup.string()
-            .required('Zip Code is Required')
-            .matches(/^[0-9]{5}(?:-[0-9]{4})?$/, 'Please Enter a Valid Zipcode')
+            .required('Zip code is required')
+            .matches(/^[0-9]{5}(?:-[0-9]{4})?$/, 'Please enter a valid zipcode'),
+        needs: Yup.string()
       });
 
     onCaptchaLoad = () => {}
@@ -49,13 +50,23 @@ class ContactForm extends Component {
             <Formik
                 validationSchema={this.schema}
                 onSubmit={this.submitHandler}
+                initialValues={{
+                    firstName: '',
+                    lastName: '',
+                    email: '',
+                    phone: '',
+                    zipcode: '',
+                    needs: '',
+                    serviceType: ''
+                }}
                 render={ ({
                     handleSubmit,
                     handleReset,
                     values,
                     handleChange,
                     errors,
-                    touched
+                    touched,
+                    handleBlur
                 }) =>(
 
 
@@ -73,11 +84,13 @@ class ContactForm extends Component {
                                 placeholder="First Name"
                                 name="firstName"
                                 onChange={handleChange}
+                                onBlur={handleBlur}
                                 value={values.firstName}
-                                isInvalid={!!errors.firstName}
+                                isInvalid={!!errors.firstName && touched.firstName}
                             />
+                            <i className="fas fa-user form-icon"></i>
                         </Form.Group>
-                        { errors.firstName && touched.firstName ? <div>{errors.firstName}</div> : '' }
+                        { errors.firstName && touched.firstName ? <div className="form-error">{errors.firstName}</div> : '' }
                     </Col>
                     <Col md>
                     <Form.Group>
@@ -87,10 +100,12 @@ class ContactForm extends Component {
                             name="lastName"
                             onChange={handleChange}
                             value={values.lastName}
-                            isInvalid={!!errors.lastName}
+                            isInvalid={!!errors.lastName&& touched.lastName}
+                            onBlur={handleBlur}
                         />
+                        <i className="fas fa-user form-icon"></i>
                     </Form.Group>
-                    { errors.lastName && touched.lastName ? <div>{errors.lastName}</div> : '' }
+                    { errors.lastName && touched.lastName ? <div className="form-error">{errors.lastName}</div> : '' }
                     </Col>
                 </Row>
                 <Row>
@@ -103,10 +118,12 @@ class ContactForm extends Component {
                                 onChange={handleChange}
                                 name="email"
                                 value={values.email}
-                                isInvalid={!!errors.email}
+                                isInvalid={!!errors.email && touched.email}
+                                onBlur={handleBlur}
                             />
+                            <i className="fas fa-envelope form-icon"></i>
                         </Form.Group>
-                        { errors.email && touched.email ? <div>{errors.email}</div> : '' }
+                        { errors.email && touched.email ? <div className="form-error">{errors.email}</div> : '' }
                     </Col>
                     <Col md>
                         <Form.Group>
@@ -117,10 +134,12 @@ class ContactForm extends Component {
                                 onChange={handleChange}
                                 name="phone"
                                 value={values.phone}
-                                isInvalid={!!errors.phone}
+                                isInvalid={!!errors.phone && touched.phone}
+                                onBlur={handleBlur}
                             />
+                            <i className="form-icon fas fa-phone"></i>
                         </Form.Group>
-                        { errors.phone && touched.phone ? <div>{errors.phone}</div> : '' }
+                        { errors.phone && touched.phone ? <div className="form-error">{errors.phone}</div> : '' }
                     </Col>
                 </Row>
                 <Row>
@@ -132,23 +151,25 @@ class ContactForm extends Component {
                                 name="zipcode"
                                 onChange={handleChange}
                                 value={values.zipcode}
-                                isInvalid={!!errors.zipcode}
+                                isInvalid={!!errors.zipcode && touched.zipcode}
+                                onBlur={handleBlur}
                             />
+                            <i className="fas fa-map-marker-alt form-icon"></i>
                         </Form.Group>
-                        { errors.zipcode && touched.zipcode ? <div>{errors.zipcode}</div> : '' }
+                        { errors.zipcode && touched.zipcode ? <div className="form-error">{errors.zipcode}</div> : '' }
                     </Col>
                     <Col md='9'>
-                        <Form.Group controlId="exampleForm.ControlSelect1">
+                        <Form.Group>
                             <Form.Label className="sr-only">Type of Service:</Form.Label>
                             <div className="contact-select-wrapper">
                                 <Form.Control
                                     as="select"
                                     className="mb-0"
-                                    defaultValue=""
                                     onChange={handleChange}
                                     name="serviceType"
                                     value={values.serviceType}
-                                    isInvalid={!!errors.serviceType}
+                                    isInvalid={!!errors.serviceType && touched.serviceType}
+                                    onBlur={handleBlur}
                                     >
                                     <option disabled value="">Type of Service</option>
                                     <option value="General Propery Inspection">General Propery Inspection</option>
@@ -163,21 +184,23 @@ class ContactForm extends Component {
                                     <option value="Annual Lawn Care Program">Annual Lawn Care Program</option>
                                     <option value="Other">Other</option>
                                 </Form.Control>
-                                { errors.serviceType && touched.serviceType ? <div>{errors.serviceType}</div> : '' }
                             </div>
                         </Form.Group>
+                        { errors.serviceType && touched.serviceType ? <div className="form-error">{errors.serviceType}</div> : '' }
                     </Col>
                 </Row>
                 <Row>
                     <Col>
-                    <Form.Group controlId="exampleForm.ControlTextarea1">
-                        <Form.Label className="sr-only">Tell Us About Your Concerns</Form.Label>
+                    <Form.Group>
+                        <Form.Label className="sr-only">Tell Us About Your Needs</Form.Label>
                         <Form.Control
+                            name="needs"
                             as="textarea"
                             rows="4"
-                            placeholder="Tell Us About Your Concerns"
+                            placeholder="Tell Us About Your Needs"
                             onChange={handleChange}
-                            value={values.concerns}
+                            value={values.needs}
+                            onBlur={handleBlur}
                         />
                     </Form.Group>
                     </Col>
@@ -193,7 +216,7 @@ class ContactForm extends Component {
                         />
                     </Col>
                     <Col>
-                        <Button variant="light" type="submit" size="lg" className="float-right">
+                        <Button variant="secondary" type="submit" size="lg" className="float-right">
                         Submit
                         </Button>
                     </Col>
