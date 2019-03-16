@@ -28,7 +28,7 @@ class ContactForm extends Component {
 
     formatPhoneNumber = phoneNumber => {
         const phoneRegex = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
-        return phoneNumber.replace(phoneRegex, "($1) $2-$3");
+        return phoneNumber.replace(phoneRegex, "$1-$2-$3");
     };
 
     submitHandler = values => {
