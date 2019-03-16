@@ -1,7 +1,7 @@
 import React from 'react';
 import {Navbar, Nav, Button, Container} from 'react-bootstrap';
 
-import logo from '../images/logo.png';
+import logo from '../images/logo.svg';
 
 const MainNav = () => (
     <div className="mainnav-wrapper pt-lg-2">
@@ -10,7 +10,7 @@ const MainNav = () => (
             <Navbar.Brand href="#home">
             <img
                 src={logo}
-                className="d-inline-block align-top"
+                className="d-inline-block align-top main-logo"
                 alt="Pro Tree logo"
             />
             </Navbar.Brand>

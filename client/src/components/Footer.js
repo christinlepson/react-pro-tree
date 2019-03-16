@@ -12,7 +12,7 @@ const Footer = () => (
                     <h3 className="footer-header position-relative">ISA Certified</h3>
                     <img src={certImg} alt="ISA Certified" className="float-left"/>
                     <p className="text-light">
-                    Pro Tree Arborists are proudly certified by the The International Society of Arboriculture.
+                    Pro Tree arborists are proudly certified by the The International Society of Arboriculture.
                     Our experts have the knowledge and advanced training needed to provide tree care at the highest level.
                     </p>
                 </Col>

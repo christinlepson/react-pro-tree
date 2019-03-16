@@ -17,7 +17,7 @@ const HomeCards = () => (
                         <Card.Body>
                             <Card.Title>Our Core Values</Card.Title>
                             <Card.Text>
-                            The Pro Tree, Inc Team is driven by our core values of honesty, caring, integrity and “Doing the Right Thing—No Matter What,” so that our clients love doing business with us!
+                            The Pro Tree Team is driven by our core values of honesty, caring, integrity and <span className="font-italic">“Doing the Right Thing—No Matter What.”</span> That's why our clients love doing business with us.
                             </Card.Text>
                             <Card.Link href="#">Learn More About Us</Card.Link>
                         </Card.Body>
@@ -47,8 +47,8 @@ const HomeCards = () => (
                         <Card.Body>
                             <Card.Title>Referral Rewards</Card.Title>
                             <Card.Text>
-                            Get rewards every time you refer us! 
-                            Pro Tree will give you a check for $50, or a $100 gift certificate for Pro Tree services, every time you refer a new customer who purchases our services.
+                            Get rewards every time you refer us!
+                            Pro Tree will give you a check for $50, or a $100 gift certificate (for Pro Tree services) every time you refer a new customer who purchases our services.
                             </Card.Text>
                             <Card.Link href="#">Get Rewarded</Card.Link>
                         </Card.Body>
