@@ -31,7 +31,7 @@ const Footer = () => (
                         <Nav.Link href="/">Home</Nav.Link>
                         <Nav.Link eventKey="link-1">About Us</Nav.Link>
                         <Nav.Link eventKey="link-2">Services</Nav.Link>
-                        <Nav.Link eventKey="link-2">Contact</Nav.Link>
+                        <Nav.Link eventKey="/contact">Contact</Nav.Link>
                         <Nav.Link eventKey="link-2">Referral Rewards</Nav.Link>
                     </Nav>
                 </Col>

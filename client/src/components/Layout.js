@@ -1,13 +1,12 @@
 import React from 'react';
 import MainNav from './MainNav';
-import Home from './Home';
 import Footer from './Footer';
 
-const Layout = () => (
-    <div id="main-nav">
+const Layout = (props) => (
+    <div>
         <MainNav />
 
-        <Home />
+        {props.children}
 
         <Footer />
 

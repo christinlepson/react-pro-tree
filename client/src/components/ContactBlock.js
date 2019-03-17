@@ -9,7 +9,7 @@ const ContactBlock = () => (
                 <Col lg className="text-light d-flex justify-content-center flex-column">
                     <h2>Contact Us for a Free Estimate</h2>
                     <p>
-                    All evaluations and treatments are performed by our trained professionals.
+                    Our inspections are always free, and evaluations and treatments are performed by our trained professionals.
                     Fill out our contact form, or<br/><a href="tel:1-410-465-8733" className="font-weight-bold">call now at 410-465-TREE (8733)<br/>for a free estimate.</a>
                     </p>
                 </Col>

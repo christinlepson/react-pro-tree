@@ -24,7 +24,7 @@ class ContactForm extends Component {
             .matches(/^\(?([0-9]{3})\)?[-.●]?([0-9]{3})[-.●]?([0-9]{4})$/, 'Please enter a valid phone number'),
         zipcode: Yup.string()
             .required('Zip code is required')
-            .matches(/^[0-9]{5}(?:-[0-9]{4})?$/, 'Please enter a valid zipcode'),
+            .matches(/^[0-9]{5}(?:-[0-9]{4})?$/, 'Invalid zipcode'),
         needs: Yup.string()
       });
 

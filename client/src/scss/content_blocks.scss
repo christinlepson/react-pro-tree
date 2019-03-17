@@ -9,6 +9,14 @@
 .contactblock-wrapper {
     background: $secondary url('./images/contactblock-bg.jpg') no-repeat fixed center/cover;
     a:hover {
-        color: $link-lighten;
+        color: $primary-lighten;
     }
+}
+
+div.services-listgroup {
+    border: 1px solid $gray-300;
+}
+
+div.services-listgroup div:nth-child(odd) {
+    background: lighten($primary, 30%);
 }
