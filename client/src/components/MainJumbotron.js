@@ -1,5 +1,6 @@
 import React from 'react';
 import { Jumbotron, Container, Button, Row, Col } from 'react-bootstrap';
+import {Link} from 'react-router-dom';
 
 const MainJumbotron = () => (
     <Jumbotron className="mainjumbotron d-flex mb-0">
@@ -21,7 +22,7 @@ const MainJumbotron = () => (
                     </Button>
                 </Col>
                 <Col md className="mt-3 mt-md-0 mt-lg-5">
-                    <Button href="/contact" size="lg" variant="secondary">Get A Free Estimate</Button>
+                    <Link to="/contact" className="btn btn-secondary btn-lg">Get A Free Estimate</Link>
                 </Col>
             </Row>
         </Container>

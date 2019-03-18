@@ -1,5 +1,6 @@
 import React from 'react';
 import {Navbar, Nav, Button, Container} from 'react-bootstrap';
+import {Link} from 'react-router-dom';
 
 import logo from '../images/logo.svg';
 
@@ -7,24 +8,24 @@ const MainNav = () => (
     <div className="mainnav-wrapper pt-lg-2">
         <Navbar bg="light" expand="lg">
         <Container>
-            <Navbar.Brand href="#home">
+            <Link className="navbar-brand" to="/">
             <img
                 src={logo}
                 className="d-inline-block align-top main-logo"
                 alt="Pro Tree logo"
             />
-            </Navbar.Brand>
+            </Link>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="mr-auto">
-                    <Nav.Link className="ml-lg-3" href="/">Home</Nav.Link>
-                    <Nav.Link className="ml-lg-3" href="#about">About Us</Nav.Link>
-                    <Nav.Link className="ml-lg-3" href="/services">Services</Nav.Link>
-                    <Nav.Link className="ml-lg-3" href="/contact">Contact</Nav.Link>
-                    <Nav.Link className="ml-lg-3" href="#rewards">Referral Rewards</Nav.Link>
+                    <Link className="nav-link ml-lg-3" to="/">Home</Link>
+                    <Link className="nav-link ml-lg-3" to="#about">About Us</Link>
+                    <Link className="nav-link ml-lg-3" to="/services">Services</Link>
+                    <Link className="nav-link ml-lg-3" to="/contact">Contact</Link>
+                    <Link className="nav-link ml-lg-3" to="#rewards">Referral Rewards</Link>
                 </Nav>
                 <Button
-                    href="tel:1-410-465-8733"
+                    to="tel:1-410-465-8733"
                     className="my-2 my-lg-0 ml-lg-auto"
                     variant="outline-primary"
                 >

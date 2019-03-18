@@ -1,12 +1,10 @@
 import React from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
-import Layout from './Layout';
 import ServiceListGroup from './ServicesListGroup';
 import ContactBlock from './ContactBlock';
 
 const Services = () => (
-    <Layout>
-
+    <div id="services">
         <Container className="py-5">
             <Row>
                 <Col className="mb-3 mb-md-0">
@@ -37,8 +35,7 @@ const Services = () => (
         </Container>
 
         <ContactBlock />
-
-    </Layout>
+    </div>
 );
 
 export default Services;

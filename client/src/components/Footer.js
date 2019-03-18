@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container, Row, Col, Nav } from 'react-bootstrap';
+import {Link} from 'react-router-dom';
 import certImg from '../images/cert.png';
 
 const currentYear = new Date().getFullYear()
@@ -22,17 +23,17 @@ const Footer = () => (
                     Wether you're a customer or a contractor, Pro Tree will give you a check for $50, or a $100 gift certificate (for Pro Tree services) 
                     every time you refer a new customer who purchases our services.
                     <br/>
-                    <a href="#home">Click here to claim your reward.</a>
+                    <Link to="/rewards">Click here to claim your reward.</Link>
                     </p>
                 </Col>
                 <Col md="4" className="mb-4">
                     <h3 className="footer-header position-relative">Navigation</h3>
                     <Nav defaultActiveKey="/home" className="footer-nav flex-column">
-                        <Nav.Link href="/">Home</Nav.Link>
-                        <Nav.Link href="/about" eventKey="link-1">About Us</Nav.Link>
-                        <Nav.Link href="/services" eventKey="/services">Services</Nav.Link>
-                        <Nav.Link href="/contact" eventKey="/contact">Contact</Nav.Link>
-                        <Nav.Link href="/rewards" eventKey="link-2">Referral Rewards</Nav.Link>
+                        <Link className="nav-link" to="/">Home</Link>
+                        <Link className="nav-link" to="/about" eventKey="link-1">About Us</Link>
+                        <Link className="nav-link" to="/services" eventKey="/services">Services</Link>
+                        <Link className="nav-link" to="/contact" eventKey="/contact">Contact</Link>
+                        <Link className="nav-link" to="/rewards" eventKey="link-2">Referral Rewards</Link>
                     </Nav>
                 </Col>
             </Row>
