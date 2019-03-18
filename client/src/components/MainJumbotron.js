@@ -21,7 +21,7 @@ const MainJumbotron = () => (
                     </Button>
                 </Col>
                 <Col md className="mt-3 mt-md-0 mt-lg-5">
-                    <Button size="lg" variant="secondary">Get A Free Estimate</Button>
+                    <Button href="/contact" size="lg" variant="secondary">Get A Free Estimate</Button>
                 </Col>
             </Row>
         </Container>

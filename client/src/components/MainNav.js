@@ -19,7 +19,7 @@ const MainNav = () => (
                 <Nav className="mr-auto">
                     <Nav.Link className="ml-lg-3" href="/">Home</Nav.Link>
                     <Nav.Link className="ml-lg-3" href="#about">About Us</Nav.Link>
-                    <Nav.Link className="ml-lg-3" href="#services">Services</Nav.Link>
+                    <Nav.Link className="ml-lg-3" href="/services">Services</Nav.Link>
                     <Nav.Link className="ml-lg-3" href="/contact">Contact</Nav.Link>
                     <Nav.Link className="ml-lg-3" href="#rewards">Referral Rewards</Nav.Link>
                 </Nav>

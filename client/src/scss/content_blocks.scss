@@ -15,8 +15,14 @@
 
 div.services-listgroup {
     border: 1px solid $gray-300;
-}
+    color: $text-muted;
 
-div.services-listgroup div:nth-child(odd) {
-    background: lighten($primary, 30%);
+    div.list-group-item {
+        padding: .2rem 0;
+    }
+
+    div:nth-child(odd) {
+        background: lighten($primary, 40%);
+    }
+
 }

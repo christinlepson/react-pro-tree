@@ -15,7 +15,7 @@ const ViewServicesCallout = () => (
                     <p>
                     Providing a full range of tree and lawn services, Pro Tree takes a responsible and green approach to keeping your trees and lawn beautiful. All evaluations and treatments are performed by our trained professionals. We invite you to experience Pro Tree's satisfaction-guaranteed lawn and tree services.
                     </p>
-                    <Button size="lg" className="mt-3" variant="primary">View Our Services</Button>
+                    <Button href="/services" size="lg" className="mt-3" variant="primary">View Our Services</Button>
                 </Col>
             </Row>
         </Container>

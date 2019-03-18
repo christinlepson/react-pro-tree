@@ -14,7 +14,7 @@ const Home = () => (
                 </Row>
 
                 <Row>
-                    <Col lg='9'>
+                    <Col lg='8'>
                         <h2>Contact Us for a Free Estimate</h2>
                         <p>
                         Our inspections are always free, and evaluations and treatments are performed by our trained professionals.
