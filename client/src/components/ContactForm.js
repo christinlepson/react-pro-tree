@@ -19,6 +19,22 @@ class ContactForm extends Component {
         };
     }
 
+    onCaptchaVerify = () => {
+        this.setState({captchaVerified: true});
+    }
+
+    onCaptchaExpired = () => {
+        this.setState({captchaVerified: false});
+    }
+
+    handleModalClose = () => {
+        this.setState({ modalShow: false });
+      }
+    
+    handleModalShow = () => {
+        this.setState({ modalShow: true });
+    }
+
     schema = Yup.object().shape({
         email: Yup.string()
           .email('Invalid email address')
@@ -39,22 +55,6 @@ class ContactForm extends Component {
             .matches(/^[0-9]{5}(?:-[0-9]{4})?$/, 'Invalid zipcode'),
         needs: Yup.string()
       });
-
-    onCaptchaVerify = () => {
-        this.setState({captchaVerified: true});
-    }
-
-    onCaptchaExpired = () => {
-        this.setState({captchaVerified: false});
-    }
-
-    handleModalClose = () => {
-        this.setState({ modalShow: false });
-      }
-    
-    handleModalShow = () => {
-        this.setState({ modalShow: true });
-    }
 
     formatPhoneNumber = phoneNumber => {
         const phoneRegex = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
