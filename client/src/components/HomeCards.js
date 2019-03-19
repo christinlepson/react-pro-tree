@@ -1,6 +1,7 @@
 import React from 'react';
 import Zoom from 'react-reveal/Zoom';
 import { Container, Card, Row, Col } from 'react-bootstrap';
+import {Link} from 'react-router-dom';
 import valuesImg from '../images/values-card.jpg';
 import satisfactionImg from '../images/satisfaction-card.jpg';
 import rewardsImg from '../images/rewards-card.jpg';
@@ -19,7 +20,7 @@ const HomeCards = () => (
                             <Card.Text>
                             The Pro Tree Team is driven by our core values of honesty, caring, integrity and <span className="font-italic">“Doing the Right Thing—No Matter What.”</span> That's why our clients love doing business with us.
                             </Card.Text>
-                            <Card.Link href="#">Learn More About Us</Card.Link>
+                            <Link to="/about" className="card-link">Learn More About Us</Link>
                         </Card.Body>
                     </Card>
                 </Zoom>
@@ -34,7 +35,7 @@ const HomeCards = () => (
                             <Card.Text>
                             Our professional and certified arborists are friendly, knowledgeable, and customer-focused. Tree Service is our specialty, and it’s our guarantee that you’ll love doing business with us.
                             </Card.Text>
-                            <Card.Link href="#">Contact Us</Card.Link>
+                            <Link to="/contact" className="card-link">Contact Us</Link>
                         </Card.Body>
                     </Card>
                 </Zoom>
@@ -50,7 +51,7 @@ const HomeCards = () => (
                             Get rewards every time you refer us!
                             Pro Tree will give you a check for $50, or a $100 gift certificate (for Pro Tree services) every time you refer a new customer who purchases our services.
                             </Card.Text>
-                            <Card.Link href="#">Get Rewarded</Card.Link>
+                            <Link to="/rewards" className="card-link">Get Rewarded</Link>
                         </Card.Body>
                     </Card>
                 </Zoom>

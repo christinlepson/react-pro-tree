@@ -30,10 +30,10 @@ const Footer = () => (
                     <h3 className="footer-header position-relative">Navigation</h3>
                     <Nav defaultActiveKey="/home" className="footer-nav flex-column">
                         <Link className="nav-link" to="/">Home</Link>
-                        <Link className="nav-link" to="/about" eventKey="link-1">About Us</Link>
-                        <Link className="nav-link" to="/services" eventKey="/services">Services</Link>
-                        <Link className="nav-link" to="/contact" eventKey="/contact">Contact</Link>
-                        <Link className="nav-link" to="/rewards" eventKey="link-2">Referral Rewards</Link>
+                        <Link className="nav-link" to="/about">About Us</Link>
+                        <Link className="nav-link" to="/services">Services</Link>
+                        <Link className="nav-link" to="/contact">Contact</Link>
+                        <Link className="nav-link" to="/rewards">Referral Rewards</Link>
                     </Nav>
                 </Col>
             </Row>
