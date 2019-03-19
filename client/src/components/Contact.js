@@ -6,11 +6,6 @@ import ServicesListGroup from './ServicesListGroup';
 const Home = () => (
     <div id="contact bg-primary">
         <Container className="py-5">
-
-            <Row>
-            
-            </Row>
-
             <Row>
                 <Col lg='8'>
                     <h2>Contact Us for a Free Estimate</h2>
@@ -24,8 +19,7 @@ const Home = () => (
                     <h4>Services Include:</h4>
                     <ServicesListGroup />
                 </Col>
-            </Row>
-            
+            </Row>      
         </Container>
     </div>
 );

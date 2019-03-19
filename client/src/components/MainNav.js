@@ -35,10 +35,10 @@ export default class MainNav extends React.Component {
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="mr-auto">
                             <Link className="nav-link ml-lg-3" to="/" onClick={this.onSelectNavItem}>Home</Link>
-                            <Link className="nav-link ml-lg-3" to="#about" onClick={this.onSelectNavItem}>About Us</Link>
+                            <Link className="nav-link ml-lg-3" to="/about" onClick={this.onSelectNavItem}>About Us</Link>
                             <Link className="nav-link ml-lg-3" to="/services" onClick={this.onSelectNavItem}>Services</Link>
                             <Link className="nav-link ml-lg-3" to="/contact" onClick={this.onSelectNavItem}>Contact</Link>
-                            <Link className="nav-link ml-lg-3" to="#rewards" onClick={this.onSelectNavItem}>Referral Rewards</Link>
+                            <Link className="nav-link ml-lg-3" to="/rewards" onClick={this.onSelectNavItem}>Referral Rewards</Link>
                         </Nav>
                         <Button
                             to="tel:1-410-465-8733"
