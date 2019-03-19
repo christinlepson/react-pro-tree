@@ -7,7 +7,7 @@ const About = () => (
     <div id="about">
     <Container className="py-5">
         <Row>
-            <Col lg='8'>
+            <Col className="mb-3 mb-md-0">
                 <h2 className="mb-4">
                 Our trained staff of tree experts have been caring for properties like yours for decades.
                 </h2>
@@ -33,8 +33,8 @@ const About = () => (
                     </Col>
                 </Row>
             </Col>
-            <Col className="d-none d-lg-block">
-                <h4>Services Include:</h4>
+            <Col md="4">
+                <h4>Our Services Include:</h4>
                 <ServicesListGroup />
             </Col>
         </Row>

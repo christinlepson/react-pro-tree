@@ -28,7 +28,7 @@ const Services = () => (
                     </Row>
                 </Col>
                 <Col md="4">
-                    <h4>Services Include:</h4>
+                    <h4>Our Services Include:</h4>
                     <ServiceListGroup />
                 </Col>
             </Row>

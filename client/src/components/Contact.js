@@ -16,7 +16,7 @@ const Home = () => (
                     <ContactForm displayUse="main" />
                 </Col>
                 <Col className="d-none d-lg-block">
-                    <h4>Services Include:</h4>
+                    <h4>Our Services Include:</h4>
                     <ServicesListGroup />
                 </Col>
             </Row>      
