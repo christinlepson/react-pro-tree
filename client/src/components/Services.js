@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import ServiceListGroup from './ServicesListGroup';
 import ContactBlock from './ContactBlock';
@@ -23,7 +24,7 @@ const Services = () => (
                             </Button>
                         </Col>
                         <Col md className="mt-3 mt-md-0 mt-lg-5">
-                            <Button href="/contact" size="lg" variant="secondary">Get A Free Estimate</Button>
+                            <Link to="/contact" className="btn btn-secondary btn-lg" size="lg">Get A Free Estimate</Link>
                         </Col>
                     </Row>
                 </Col>

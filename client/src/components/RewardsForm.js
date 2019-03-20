@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 import Recaptcha from 'react-recaptcha'
 import { Form, Row, Col, Button, Modal } from 'react-bootstrap';
 import * as Yup from 'yup';
@@ -57,10 +58,23 @@ class RewardsForm extends Component {
 
     submitHandler = values => {
 
+        values.type = "referral";
+
         if (this.state.captchaVerified) {
-            setTimeout(() => {
-            alert(JSON.stringify(values, null, 2));
-            }, 500);
+            axios.post('/send', values)
+                .then( response => {
+                    if (response.data === 'OK. Redirecting to /success') {
+                        window.location = '/success';
+                    } else {
+                        window.location = '/error';
+                    }
+
+                } )
+                .catch( error => {
+                    console.log(error);
+                    window.location = '/error'
+                }
+            );
         } else {
             this.setState({modalShow: true});
         }
