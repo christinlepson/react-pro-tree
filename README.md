@@ -9,7 +9,7 @@ The back-end logic was written in Node.js and Express.
 
 [Click here to view the original.](http://www.465tree.com/)
 
-##Front-End Technologies used
+## Front-End Technologies used
 
 1. React
 2. Axios (for data fetching)
@@ -20,15 +20,15 @@ The back-end logic was written in Node.js and Express.
 5. React Reveal (for animation)
 6. React ReCaptcha (for Google reCaptcha integration)
 
-##Back-End Technologies used
+## Back-End Technologies used
 1. Express / Node.js
 2. Nodemailer (for handling contact form e-mailing logic)
 3. Body Parser
 4. Morgan
 
 ## Screenshots
-Redesign homepage: 
+Redesign homepage preview: 
 ![Redesign screenshot](https://i.imgur.com/oMTuV23.png "Redesign screenshot")
 
-Original homepage:
+Original homepage preview:
 ![Original screenshot](https://i.imgur.com/dc4CA2o.png "Original screenshot")
